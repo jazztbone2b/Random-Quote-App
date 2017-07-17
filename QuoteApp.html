@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+    <link rel="stylesheet" type="text/css" href="QuoteApp.css">
+    <title>Random Quote App</title>
+  </head>
+  
+  <body id="randomColor">
+    <div id="quoteBox" class="box">
+      
+      <div id="wordBox">
+        <h2 class="quoteText">It's taken me all my life to learn what not to play.</h2>
+          <div id="author"><p>- Dizzy Gillespie</p></div>
+      </div>
+      
+      <div>
+      <button id="button" class="nextQuote" onclick="changeBackgroundColor(); generateNewQuote();">Change the quote</button>
+      </div>
+      
+      <div class="social">
+      <a class="button" id="tweetMe" target="_blank";>
+<span id="a" class="fa-stack fa-xs"> 
+	<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+	</span></a>
+      
+      <a class="button" id="shareMe" target="_blank">
+<span id="a" class="fa-stack fa-xs"> 
+	<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+	</span></a>
+      </div>
+    
+      <a href="https://codepen.io/jazztbone2b/" target="_blank"><center><h5>Created by Collin Banks</h5></center></a>
+    </div>
+
+  <script type="text/javascript" src="QuoteApp.js"></script>
+
+  </body>
+</html>
