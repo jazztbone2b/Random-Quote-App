@@ -1,0 +1,218 @@
+
+<html>
+  <head>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+    <link rel="stylesheet" type="text/css" href="QuoteApp.css">
+    <title>Random Quote App</title>
+  </head>
+  
+  <style>
+  body{
+  background-color: #efa64c;
+  font-family: 'Roboto', sans-serif;
+  transition: 1s;
+}
+
+.box{
+  height: 300px;
+  width: 500px;
+  background-color: white;
+  margin: auto;
+  margin-top: 150px;
+  border-radius: 15px;
+  text-align: right;
+  padding-top: 0px;
+  box-shadow: 5px 5px 5px black;
+}
+
+.quoteText{
+  margin-right: 20px;
+  margin-left: 20px;
+  color: #efa64c;
+  
+}
+
+#author{
+  margin-top: 10px;
+  margin-right: 20px;
+  color: #efa64c;
+  font-size: 30px;
+}
+
+#wordBox{
+  height: 200px;
+  padding-top: 35px;
+}
+
+.nextQuote{
+  float: right;
+  margin-top: 23px;
+  margin-right: 20px;
+  border-radius: 5px;
+  background-color: #efa64c;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.social{
+  float: left;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+h5{
+  margin-top: 100px;
+  color: white;
+}
+
+i{
+  background-color: #efa64c;  
+  border-radius: 20px;
+}
+
+a{
+  text-decoration: none;
+}
+
+@media screen and (max-width: 480px){
+  .box{
+    margin-top: 100px;
+    width: 250px;
+    height: 320px;
+  }
+  .quoteText{
+    font-size: 18px;
+  }
+  .nextQuote{
+    margin-top: 45px;
+  }
+  .social{
+    margin-top: 38px;
+  }
+}
+</style>
+
+  <body id="randomColor">
+    <div id="quoteBox" class="box">
+      
+      <div id="wordBox">
+        <h2 class="quoteText">It's taken me all my life to learn what not to play.</h2>
+          <div id="author"><p>- Dizzy Gillespie</p></div>
+      </div>
+      
+      <div>
+      <button id="button" class="nextQuote" onclick="changeBackgroundColor(); generateNewQuote();">Change the quote</button>
+      </div>
+      
+      <div class="social">
+      <a class="button" id="tweetMe" target="_blank";>
+<span id="a" class="fa-stack fa-xs"> 
+	<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+	</span></a>
+      
+      <a class="button" id="shareMe" target="_blank">
+<span id="a" class="fa-stack fa-xs"> 
+	<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+	</span></a>
+      </div>
+    
+      <a href="https://codepen.io/jazztbone2b/" target="_blank"><center><h5>Created by Collin Banks</h5></center></a>
+    </div>
+<script>
+
+window.onload = generateNewQuote();
+  //generates a new quote
+  function generateNewQuote(){ 
+    var randomQuote = ["Hipness is not a state of mind, it's a fact of life.",  "Well if I could play like Wynton, I wouldn't play like Wynton.", "Music washes away the dust of every day life.", "Sometimes you need to stand with your nose to the window and have a good look at jazz. And I've done that on many occasions.", "You can play a shoestring if you're sincere.", "I'll play it first & tell you what it is later.", "The first time I heard Bird play, it hit me right between the eyes.", "Stop before you're done.", "However it goes, I'll just keep playing. That's where the basic satisfaction is at.", "A good quartet is like a good conversation among friends interacting to each other's ideas.", "The sign of a mature musician is knowing what not to play.", "If you can't play the Blues you might as well hang it up.", "Jazz is restless. It won't stay put & it never will.", "Jazz speaks for life. This is triumphant music.", "Talking about music is like dancing about architecture.", "It's taken me all my life to learn what not to play."];
+  
+    
+    var newQuote = randomQuote[Math.floor(Math.random() * randomQuote.length)]; 
+  //assign a random quote
+    document.querySelector('.quoteText').innerHTML = newQuote;
+    
+    //assigns the quote's author to the respective quote
+    if(newQuote === randomQuote[0]){
+      document.querySelector('#author').innerHTML = "-Cannonball Adderly";
+    } else if(newQuote === randomQuote[1]){
+      document.querySelector('#author').innerHTML = "-Chet Baker";
+    } else if(newQuote === randomQuote[2]){
+      document.querySelector('#author').innerHTML = "-Art Blakey";
+    } else if(newQuote === randomQuote[3]){
+      document.querySelector('#author').innerHTML = "-J.J. Johnson";
+    } else if(newQuote === randomQuote[4]){
+      document.querySelector('#author').innerHTML = "-John Coltrane"
+    } else if(newQuote === randomQuote[5]){
+      document.querySelector('#author').innerHTML = "-Miles Davis"
+    } else if(newQuote === randomQuote[6]){
+      document.querySelector('#author').innerHTML = "-John Coltrane"
+    } else if(newQuote === randomQuote[7]){
+      document.querySelector('#author').innerHTML = "-Miles Davis"
+    } else if(newQuote === randomQuote[8]){
+      document.querySelector('#author').innerHTML = "-Kenny Dorham"
+    } else if(newQuote === randomQuote[9]){
+      document.querySelector('#author').innerHTML = "-Stan Getz"
+    } else if(newQuote === randomQuote[10]){
+      document.querySelector('#author').innerHTML = "-Dizzy Gillespie"
+    } else if(newQuote === randomQuote[11]){
+      document.querySelector('#author').innerHTML = "-Dexter Gordon"
+    } else if(newQuote === randomQuote[12]){
+      document.querySelector('#author').innerHTML = "-J.J. Johnson"
+    } else if(newQuote === randomQuote[13]){
+      document.querySelector('#author').innerHTML = "-Martin Luther King, Jr."
+    } else if(newQuote === randomQuote[14]){
+      document.querySelector('#author').innerHTML = "-Thelonious Monk"
+    } else if(newQuote === randomQuote[15]){
+      document.querySelector('#author').innerHTML = "-Dizzy Gillespie"
+    }
+    
+    //copies the text shown in newQuote and retweets it in a new window
+    $('#tweetMe').attr(
+'href', 'https://twitter.com/intent/tweet?hashtags=jazzquotes&text=' + newQuote + " " + document.querySelector('#author').innerHTML
+) 
+    //shares a link to the app to facebook
+    $('#shareMe').attr(
+    'href', 'https://www.facebook.com/sharer/sharer.php?u=https://codepen.io/jazztbone2b/pen/WOPQPG/?editors=0010')
+}
+
+//randomly changes the color
+function changeBackgroundColor(){ 
+  var backgroundColor = '#';
+  
+  //colors to choose from
+  var colorChoices = ['e27fef', 'f4d558', '57f462', '57f4f4', '579df4', 'f45757', '5d6496', '965d5d', '5d9691', '820101', '203f70', '702065', '702020', '724747', '47724c', 'a07d7d', '827554', '82536f', 'c64141', 'c3c641', '41c65d', '41c6a4', '417ac6', 'c64141', 'c66641'];
+    
+  //assign a random color
+  backgroundColor += colorChoices[Math.floor(Math.random() * colorChoices.length)];
+  
+  //sets the color for each target element
+  document.querySelector('#randomColor').style.background = backgroundColor;
+  document.querySelector('.nextQuote').style.background = backgroundColor;
+  document.querySelector('.quoteText').style.color = backgroundColor;
+  document.querySelector('.fa-facebook').style.background = backgroundColor;
+  document.querySelector('.fa-twitter').style.background = backgroundColor;
+  document.querySelector('#author').style.color = backgroundColor;
+}
+
+//creates a simple fade animation using jQuery
+$('button').click(function(){
+  $('.nextQuote').fadeOut(1);
+  $('.nextQuote').fadeIn(999);
+  $('.quoteText').fadeOut(1);
+  $('.quoteText').fadeIn(999);
+  $('.fa-facebook').fadeOut(1);
+  $('.fa-facebook').fadeIn(999);
+  $('.fa-twitter').fadeOut(1);
+  $('.fa-twitter').fadeIn(999);
+  $('#author').fadeOut(1);
+  $('#author').fadeIn(999);
+});
+</script>
+  <script type="text/javascript" src="QuoteApp.js"></script>
+
+  </body>
+</html>
